@@ -434,15 +434,42 @@ console.log(
 */
 console.log("------------------------ESERCIZIO 16------------------------");
 
+const sumAllTheYears = (array) => {
+  let sum = 0;
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    sum = sum + parseInt(element.Year);
+  }
+  return sum;
+};
+
+console.log(sumAllTheYears(movies));
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+console.log("------------------------ESERCIZIO 17------------------------");
 
+const searchByTitle = (array, string) => {
+  //filtro l'array vedendo se nella proprietà Title è inclusa la parola della striga, do ad entrambi valore lowercase per rendere la verifica case insensitive
+  const serarchMovie = array.filter((array) =>
+    array.Title.toLowerCase().includes(string.toLowerCase())
+  );
+  return serarchMovie;
+};
+
+console.log(
+  "cerco i film che contengono nel titolo la parola 'avengers': ",
+  searchByTitle(movies, "avengers")
+);
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+console.log("------------------------ESERCIZIO 18------------------------");
 
+const searchAndDivide = (string) => {
+  searchByTitle(movies, string);
+};
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
