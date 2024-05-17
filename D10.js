@@ -8,6 +8,9 @@ REGOLE
 */
 
 // JS Basics
+console.log(
+  "***********************************  JS BASICS  ***********************************"
+);
 
 /* ESERCIZIO A
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
@@ -70,26 +73,66 @@ console.log(
 );
 console.log("l'elemento rimosso è: ", ultimoElemento);
 // Funzioni
+console.log(
+  "***********************************  FUNZIONI  ***********************************"
+);
 
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
+console.log("------------------------ESERCIZIO 1------------------------");
+
+const dice = (numero) => {
+  const randNumb = Math.floor(Math.random() * numero + 1);
+  console.log(randNumb);
+};
+
+dice(6);
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+console.log("------------------------ESERCIZIO 2------------------------");
 
+const whoIsBigger = (num1, num2) => {
+  let largerNumb = 0;
+  if (num1 > num2) {
+    largerNumb = num1;
+  } else {
+    largerNumb = num2;
+  }
+  return largerNumb;
+};
+
+console.log(whoIsBigger(6, 9));
 /* ESERCIZIO 3
-  Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
-
+ 
+ Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
+console.log("------------------------ESERCIZIO 3------------------------");
 
+const splitMe = (string) => {
+  return string.split(" ");
+};
+console.log(splitMe("ciao come va"));
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+console.log("------------------------ESERCIZIO 4------------------------");
 
+const deleteOne = (string, boolean) => {
+  let newString = "";
+  if (boolean) {
+    newString = string.substring(1);
+  } else {
+    newString = string.substring(0, string.length - 1);
+  }
+  return newString;
+};
+
+console.log(deleteOne("ciao mondo", false));
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
