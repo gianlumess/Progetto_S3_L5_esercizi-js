@@ -545,10 +545,29 @@ console.log("aggiunto nuovo elemento alla lista non ordinata con id='myList'");
 */
 console.log("------------------------ESERCIZIO 25------------------------");
 
+const svuotaUl = () => {
+  const ul = document.getElementById("myList");
+
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
+  }
+};
+
+svuotaUl();
+console.log("lista non ordinata svuotata");
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+console.log("------------------------ESERCIZIO 26------------------------");
 
+const addClassToTr = () => {
+  const allTr = document.querySelectorAll("tr");
+  allTr.forEach(function (tr) {
+    tr.classList.add("test");
+  });
+};
+addClassToTr();
+console.log("aggiunta classe 'test' a tutti i <tr>");
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
