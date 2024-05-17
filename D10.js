@@ -190,13 +190,27 @@ console.log("oggi è: ", whatDayIsIt());
 */
 console.log("------------------------ESERCIZIO 8------------------------");
 
+const rollTheDices = (number) => {};
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
+console.log("------------------------ESERCIZIO 9------------------------");
+
+const howManyDays = (date) => {
+  const oggi = new Date();
+  const dataInserita = new Date(date);
+  console.log("data fornita come parametro: ", dataInserita);
+  const differenza = oggi.getDate() - dataInserita.getDate();
+  console.log("data corrente: ", oggi);
+
+  return differenza;
+};
+console.log("Differenza di giorni: ", howManyDays("10 May 2024"));
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+console.log("------------------------ESERCIZIO 10------------------------");
 
 // Arrays & Oggetti
 
