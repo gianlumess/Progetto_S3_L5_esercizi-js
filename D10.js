@@ -212,6 +212,29 @@ console.log("Differenza di giorni: ", howManyDays("10 May 2024"));
 */
 console.log("------------------------ESERCIZIO 10------------------------");
 
+const isTodayMyBirthday = (birthday) => {
+  const oggi = new Date();
+  const compleanno = new Date(birthday);
+  const selezioneGionroMeseCorrente = oggi.getDate();
+  const selezioneGiornoMeseCompleanno = compleanno.getDate();
+  const selezioneMeseCorrente = oggi.getMonth();
+  const selezioneMeseCompleanno = compleanno.getMonth();
+
+  if (
+    selezioneGionroMeseCorrente === selezioneGiornoMeseCompleanno &&
+    selezioneMeseCorrente === selezioneMeseCompleanno
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log("il giorno del mio compleanno è l'8 febbraio");
+console.log(
+  "oggi è il mio compleanno?  ",
+  isTodayMyBirthday("17 February 2001")
+);
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
