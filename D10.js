@@ -362,7 +362,7 @@ const movies = [
 console.log("------------------------ESERCIZIO 11------------------------");
 
 const deleteProp = (obj, string) => {
-  delete obj.string;
+  delete obj[string];
   return obj;
 };
 
@@ -372,7 +372,10 @@ let secondMe = {
   age: 23,
 };
 
-console.log(deleteProp(secondMe, "surname"));
+console.log(
+  "elimino la proprieta 'surname' dall'oggetto : ",
+  deleteProp(secondMe, "surname")
+);
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
