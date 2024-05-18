@@ -573,6 +573,10 @@ addClassToTr();
 console.log("aggiunta classe 'test' a tutti i <tr>");
 // [EXTRA] JS Avanzato
 
+console.log(
+  "***********************************  JS AVANZATO  ***********************************"
+);
+
 /* ESERCIZIO 27
   Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
 
@@ -584,7 +588,20 @@ console.log("aggiunta classe 'test' a tutti i <tr>");
   ***
 
 */
+console.log("------------------------ESERCIZIO 27------------------------");
 
+const halfTree = (height) => {
+  if (typeof height !== "number" || height <= 0) {
+    console.log("fornisci numero positivo maggiore di 0");
+    return;
+  }
+
+  for (let index = 1; index <= height; index++) {
+    console.log("*".repeat(index));
+  }
+};
+
+halfTree(5);
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -596,9 +613,22 @@ console.log("aggiunta classe 'test' a tutti i <tr>");
   *****
 
 */
+console.log("------------------------ESERCIZIO 28------------------------");
 
+const tree = (height) => {
+  if (typeof height !== "number" || height <= 0) {
+    console.log("fornisci numero positivo maggiore di 0");
+    return;
+  }
+
+  for (let index = 1; index <= height; index++) {
+    let foglia = "*".repeat(2 * index - 1);
+    let spazi = " ".repeat(height - index);
+    console.log(spazi + foglia);
+  }
+};
+
+tree(5);
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
